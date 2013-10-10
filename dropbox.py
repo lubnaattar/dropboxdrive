@@ -24,7 +24,7 @@ def sizeof_fmt(num):
         num /= 1024.0
 	
 @app.route('/access_token')
-def fb_accessToken():
+def db_accessToken():
 	token = request.args.get('token','')	
 	print token
 	raw_data = urllib2.urlopen("https://api.dropbox.com/1/account/info?access_token=%s" % token).read()
